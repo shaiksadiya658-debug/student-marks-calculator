@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Student Marks Calculator</h1>
+      <p class="subtitle">Enter student details and marks to calculate the result.</p>
+
+      <form id="marksForm">
+        <label for="studentName">Student name</label>
+        <input id="studentName" type="text" placeholder="Enter student name" required>
+
+        <label for="rollNumber">Roll number</label>
+        <input id="rollNumber" type="text" placeholder="Enter roll number" required>
+
+        <div class="marks-grid">
+          <div>
+            <label for="subject1">Subject 1</label>
+            <input id="subject1" type="number" min="0" max="100" placeholder="0–100" required>
+          </div>
+          <div>
+            <label for="subject2">Subject 2</label>
+            <input id="subject2" type="number" min="0" max="100" placeholder="0–100" required>
+          </div>
+          <div>
+            <label for="subject3">Subject 3</label>
+            <input id="subject3" type="number" min="0" max="100" placeholder="0–100" required>
+          </div>
+          <div>
+            <label for="subject4">Subject 4</label>
+            <input id="subject4" type="number" min="0" max="100" placeholder="0–100" required>
+          </div>
+          <div>
+            <label for="subject5">Subject 5</label>
+            <input id="subject5" type="number" min="0" max="100" placeholder="0–100" required>
+          </div>
+        </div>
+
+        <button type="submit">Calculate Result</button>
+        <button type="reset" class="secondary">Clear</button>
+      </form>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <h2>Student Result</h2>
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Roll number:</strong> <span id="resultRoll"></span></p>
+        <p><strong>Total marks:</strong> <span id="totalMarks"></span> / 500</p>
+        <p><strong>Percentage:</strong> <span id="percentage"></span>%</p>
+        <p><strong>Grade:</strong> <span id="grade"></span></p>
+        <p><strong>Status:</strong> <span id="status"></span></p>
+      </section>
+      <footer>Student Marks Calculator · Beginner project</footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
